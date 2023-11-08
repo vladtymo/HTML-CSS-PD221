@@ -29,13 +29,14 @@
             text-align: center;
             text-transform: uppercase;
             border-radius: 4px;
+            box-shadow: 2px 1px 5px 0px rgb(100, 100, 100);
+
         }
 
         p {
             background-color: rgb(226, 226, 226);
             padding: 4px;
             border-radius: 4px;
-            /* box-shadow: 2px 1px 5px 0px rgb(100, 100, 100); */
         }
 
         mark {
@@ -50,21 +51,33 @@
             border: 1px solid black;
             border-left-width: 3px;
         }
+
+        /* 2 - class selector */
+        .bordered {
+            border: 1px solid brown;
+            padding: 2px;
+        }
+
+        .important-text {
+            background-color: black;
+            color: white;
+            padding: 2px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 
 <body>
-    <p style="background-color: darkblue; color: white; padding: 10px; text-align: center;">
-        Inline style example
-    </p>
-
     <!-- Page Content -->
     <h1>Introduction to HTML</h1>
     <h2>Introduction to CSS</h2>
     <h3>Introduction to Web</h3>
     <h4>Introduction to Tags</h4>
-    <h5>Introduction to Selectors</h5>
+    <h5 class="important-text">Introduction to Selectors</h5>
     <h6>Introduction to Semantic</h6>
+
+    <h2 style="background-color: brown; color: white; padding: 10px; text-align: center;">Element with Inline styles
+    </h2>
 
     <p>This is the first paragraph!</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, illum corrupti iste rerum nulla deserunt,
@@ -74,9 +87,9 @@
 
     <!-- emmet: article>(p>lorem5)*3 -->
     <article>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p class="important-text bordered">Lorem ipsum dolor sit amet.</p>
         <p>A, veritatis iste? Deleniti, consequuntur!</p>
-        <p>Dicta, voluptas fugit. Recusandae, iure!</p>
+        <p class="bordered">Dicta, voluptas fugit. Recusandae, iure!</p>
     </article>
     <hr>
     <!-- Select Code -> Ctrl + Shift + P -> Wrap with Abbr... -> write code -->
@@ -105,7 +118,7 @@
         of Lincoln's
         Gettysburg Address, which
         many of us had to memorize in high school.</p>
-    <p><strong>Block quote</strong> example:</p>
+    <p><strong class="important-text">Block quote</strong> example:</p>
     <blockquote>I need to do my homework.</blockquote>
 
     <h3>You can find us</h3>

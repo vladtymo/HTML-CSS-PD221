@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Mode</title>
+    <style>
+        body {
+            margin: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            background-color: lightgray;
+            padding: 6px;
+        }
+
+        span {
+            background-color: darkgray;
+            /* width: 500px; */
+            /* padding: 20px; */
+            /* margin: 20px; */
+        }
+
+        div {
+            background-color: darkgray;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .container {
+            background-color: lightgray;
+            padding: 10px;
+        }
+
+        .inline-block {
+            /* inline-block: size = content, affects block properties correcly */
+            display: inline-block;
+            /* width: 100px; */
+            margin: 4px;
+            padding: 6px;
+        }
+
+        img {
+            display: block;
+            margin: 6px;
+        }
+
+        /* selector hierarchy */
+        .image-container img p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, officiis?</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>Inline Elements (size = content)</h2>
+    <p>
+        <strong>Inline elements: </strong>
+        <span>Red</span>
+        <span>Green</span>
+        <span>Blue</span>
+    </p>
+
+    <h2>Inline-Block Elements</h2>
+    <p>
+        <strong>Inline-block elements: </strong>
+        <span class="inline-block">Red</span>
+        <span class="inline-block">Green</span>
+        <span class="inline-block">Blue</span>
+    </p>
+
+    <h2>Block Elements (size = container size)</h2>
+
+    <div class="container">
+        <strong>Block elements: </strong>
+        <div>Red</div>
+        <div>Green</div>
+        <div>Blue</div>
+    </div>
+
+    <div class="image-container">
+        <img width="100" src="./images/block_vs_inline_diagram.png" alt="">
+        <img width="100" src="./images/block_vs_inline_diagram.png" alt="">
+        <img width="100" src="./images/block_vs_inline_diagram.png" alt="">
+    </div>
+
+</body>
+
+</html>

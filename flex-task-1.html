@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Task 1</title>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            padding: 16px;
+            background-color: rgb(181, 216, 228);
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card {
+            background-color: rgb(235, 235, 235);
+        }
+
+        .card img {
+            /* width = container width */
+            width: 100%;
+            display: block;
+        }
+
+        .card .text {
+            margin: 10px;
+        }
+
+        .card h2 {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="card"><img src="./images/nature1.jpg" alt="">
+                <div class="text">
+                    <h2>Test title</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="text">
+                    <p>Lorem.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/landscape2.jpg" alt="">
+                <div class="text">
+                    <h2>Test title</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="text">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, provident!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/landscape2.jpg" alt="">
+                <div class="text">
+                    <h2>Test title</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, fugiat.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="text">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus nulla eum sint? Tenetur,
+                        nesciunt, a neque, magnam eaque rerum quibusdam possimus laudantium eligendi delectus veniam non
+                        repellat ad facere accusantium.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            width: 70%;
+            margin: auto;
+        }
+
+        form {
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 8px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        form h2 {
+            text-align: center;
+        }
+
+        .stretch-last {
+            display: flex;
+            gap: 8px;
+        }
+
+        .stretch-last>input:last-child {
+            flex-grow: 1;
+        }
+
+        /* ----- custom control style ----- */
+        .input-style {
+            background-color: brown;
+            color: white;
+            padding: 10px;
+            border: none;
+            outline: none;
+            transition: .3s;
+        }
+
+        .input-style:focus {
+            /* -webkit-box-shadow: inset 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: inset 0px 0px 25px 0px rgba(0, 0, 0, 0.75); */
+            box-shadow: inset 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        input[type="password"] {
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        #submit-btn {
+            background-color: burlywood;
+            color: white;
+            padding: 10px;
+            border: none;
+            transition: .1s;
+            box-sizing: border-box;
+        }
+
+        #submit-btn:hover {
+            background-color: rgb(174, 143, 103);
+        }
+
+        #submit-btn:active {
+            transform: rotate(3deg);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <h2>Form Example</h2>
+
+        <div class="stretch-last">
+            <label for="username-input" accesskey="u">Username:</label>
+            <input type="text" id="username-input">
+        </div>
+
+        <label class="stretch-last" accesskey="e">
+            <span>Email:</span>
+            <input type="email">
+        </label>
+        <label class="stretch-last">
+            <span>Password:</span>
+            <input type="password">
+        </label>
+
+        <input type="number">
+        <input type="tel">
+        <input type="date">
+        <input type="time">
+        <input type="month">
+        <input type="week">
+        <input type="file">
+        <input type="color">
+        <div>
+            <label>Check Me</label>
+            <input type="checkbox">
+        </div>
+        <div>
+            <h3>Payment Type</h3>
+            <label>By Cash:</label>
+            <input type="radio" name="payment" id="">
+            <label>By Card:</label>
+            <input type="radio" name="payment" id="">
+            <label>Apple Pay</label>
+            <input type="radio" name="payment" id="">
+        </div>
+        <input type="range">
+        <input type="file">
+
+        <input type="text" class="input-style">
+
+        <input type="button" value="Push Me">
+        <button type="reset">Cancel</button>
+        <button id="submit-btn" type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

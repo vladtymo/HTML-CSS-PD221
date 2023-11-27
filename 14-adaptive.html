@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        body * {
+            padding: 20px;
+        }
+
+        header {
+            background-color: blueviolet;
+        }
+
+        nav {
+            background-color: blue;
+            /* visibility: collapse; */
+        }
+
+        .container {
+            display: flex;
+            height: 50vh;
+            padding: 0;
+        }
+
+        aside:first-child {
+            background-color: cornflowerblue;
+            flex-basis: 20%;
+        }
+
+        aside:last-child {
+            background-color: darkcyan;
+            flex-basis: 30%;
+        }
+
+        main {
+            background-color: chocolate;
+            flex-basis: 50%;
+        }
+
+        footer {
+            background-color: coral;
+        }
+
+        @media screen and (min-width: 501px) and (max-width: 800px) {
+            aside:last-child {
+                display: none;
+            }
+
+            aside:first-child {
+                flex-basis: 30%;
+            }
+
+            main {
+                flex-basis: 70%;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .container {
+                flex-direction: column;
+            }
+
+            main {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Header</header>
+    <nav>Menu</nav>
+    <div class="container">
+        <aside>Left Block</aside>
+        <main>Content</main>
+        <aside>Right Block</aside>
+    </div>
+    <footer>Footer</footer>
+</body>
+
+</html>

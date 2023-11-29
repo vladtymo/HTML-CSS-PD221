@@ -1,0 +1,36 @@
+/*
+    Steps to Compile to CSS:
+         - Install VS Code Extension: Live Sass Compiler
+         - Create .scss file
+         - Click Watch Sass tool on the bottom of the VS Code
+*/
+
+@use "sass:math";
+
+header {
+    color: red;
+    font-size: 1.2em;
+    /* .... */
+
+    // header .logo
+    .logo {
+        width: 100px;
+        height: (3 * 3) + 1px;
+        /* ... */
+    }
+
+    // header > nav
+    >nav {
+        color: darkblue;
+        border-radius: 10px;
+
+        a {
+            text-decoration: none;
+
+            // & - this element (a)
+            &:hover {
+                opacity: .0;
+            }
+        }
+    }
+}

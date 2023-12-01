@@ -1,0 +1,13 @@
+#myCarousel .carousel-item {
+    height: 400px;
+}
+
+#myCarousel img {
+    object-fit: cover;
+}
+
+.card img {
+    margin: 10px;
+    height: 200px;
+    object-fit: contain;
+}
